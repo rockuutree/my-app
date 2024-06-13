@@ -1,38 +1,103 @@
-.App {
-  text-align: center;
+.app {
+  display: flex;
+  height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.left-bar {
+  flex: 0 0 60px;
+  background-color: #111111;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 20px 0;
+  border-right: 1px solid #515151b0;
+}
+
+.left-sidebar {
+  flex: 0 0 200px;
+  background-color: #1f1f1f;
+  color: white;
+  border-right: 1px solid #515151b0;
+  padding: 0.5rem;
+}
+
+.sidebar-bg {
+  width: 100%; /* Ensure it takes full width */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px; /* Apply rounded corners */
+}
+
+.left-sidebar ul {
+  list-style-type: none;
+  padding: 20px;
+}
+
+.left-sidebar li {
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+  background-color: #1f1f1f;
+  border-right: 1px solid #515151b0;
+}
+
+.main-content p, h2{
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.right-sidebar {
+  flex: 0 0 250px;
+  padding: 20px;
+  background-color: #1f1f1f;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.right-sidebar li{
+  color: white;
+}
+
+.new-suggestion-btn {
+  background-color: #6200ee;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.user-directory {
+  list-style-type: none;
+  padding: 0;
+}
+
+.user-directory li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.user-directory img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  margin-bottom: 20px;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.icon-container:hover {
+  background-color: #333333;
 }
